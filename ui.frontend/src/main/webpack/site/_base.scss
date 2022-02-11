@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $body-bg;
+  font-family: $font-family-base;
+  font-size: $font-size;
+  text-align: left;
+  color: $text-color;
+  line-height: $line-height-base;
+}
+
+// Page padding
+header,
+main,
+footer {
+  padding: $page-padding--desktop !important;
+
+  @media (max-width: $screen-small) {
+    padding: $page-padding--mobile !important;
+  }
+}
+
+header {
+  padding-bottom: 0 !important;
+}
+
+// Headings
+// -------------------------
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: $font-family-serif;
+  font-weight: $font-weight-normal;
+  margin-top: $line-height-computed;
+  margin-bottom: ($line-height-computed / 2);
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: $font-family-sans-serif;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+}
+
+h1,
+.h1 {
+  font-size: $font-size-xlarge;
+}
+h2,
+.h2 {
+  font-size: $font-size-large;
+}
+h3,
+.h3 {
+  font-size: $font-size-medium;
+}
+h4,
+.h4 {
+  font-size: $font-size;
+}
+h5,
+.h5 {
+  font-size: $font-size-small;
+}
+h6,
+.h6 {
+  font-size: $font-size-xsmall;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+h1 a,
+h2 a,
+h3 a {
+  color: $text-color;
+}
+
+// Body text
+// -------------------------
+
+p {
+  margin: 0 0 ($line-height-computed / 2);
+  font-size: $font-size-paragraph;
+  line-height: $line-height-base + 0.5;
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/cmpssproto" mode="merge"/>
+    <filter root="/content/cmpssproto" mode="merge"/>
+    <filter root="/content/dam/cmpssproto/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/cmpssproto" mode="merge"/>
+</workspaceFilter>

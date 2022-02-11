@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/cmpssproto/clientlibs"/>
+    <filter root="/apps/cmpssproto/components"/>
+    <filter root="/apps/cmpssproto/i18n"/>
+</workspaceFilter>

@@ -1,0 +1,50 @@
+.cmp-breadcrumb {
+  .cmp-breadcrumb__list {
+    padding: 0;
+    margin-bottom: 0px;
+    list-style: none;
+    font-size: $font-size-small;
+    margin-top: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media (max-width: $screen-small) {
+      font-size: $font-size-xsmall;
+    }
+  }
+
+  .cmp-breadcrumb__item {
+    display: block;
+    padding: 10px 5px;
+
+    &:before {
+      font-size: 1em;
+      content: ">";
+      color: $brand-primary;
+      padding-right: 5px;
+    }
+
+    &:first-child {
+      padding-left: 0;
+      &:before {
+        content: none;
+      }
+
+      &:hover {
+        text-decoration: underline $brand-primary;
+      }
+    }
+  }
+
+  .cmp-breadcrumb__item-link {
+    color: $text-color;
+    text-decoration: none;
+    font-weight: 600;
+    &:first {
+      padding-left: 0px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+//== XF Footer style, used on page template
+
+footer.experiencefragment {
+  background-color: $black;
+  color: $text-color-inverse;
+  padding: 2rem 0;
+  margin-top: 3rem;
+
+  .cmp-experiencefragment {
+    // max-width: $max-content-width;
+    // margin: 0 auto;
+  }
+
+  p {
+    font-size: $font-size-small;
+  }
+
+  #footer--copyright {
+    font-size: $font-size;
+  }
+
+  #footer--links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+
+  // mobile sizing
+  @media (max-width: $screen-small) {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 1rem 0;
+  }
+
+  #footer--logo {
+    @media (max-width: $screen-small) {
+      display: none;
+    }
+  }
+}
