@@ -28,21 +28,86 @@
   }
 }
 
-@media screen and (max-width: $screen-small) {
+.cmp-navigation--wiki {
   .cmp-navigation {
     float: none;
     padding-right: 0;
+    font-weight: 800;
+
+    margin-top: 2rem;
   }
 
   .cmp-navigation__item {
-    display: block;
     float: none;
-
-    margin-bottom: 1.2em;
-    border-left: 2px solid $brand-primary;
+    padding-bottom: 5px;
   }
 
   .cmp-navigation__item-link {
-    padding: 20px 15px;
+    padding: 0;
+    &::before {
+      content: ">";
+      margin-right: 0.5em;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+
+      background-color: $brand-primary;
+    }
+  }
+
+  // style active link
+  .cmp-navigation__item--active > .cmp-navigation__item-link {
+    &::before {
+      content: "v";
+      color: $brand-primary;
+      font-size: 1.2em;
+    }
+  }
+
+  // hiding subpages that are not on active parent
+  .cmp-navigation__item--level-0 > .cmp-navigation__group {
+    display: none;
+  }
+  // displaying subpages that are on active parent
+  .cmp-navigation__item--active > .cmp-navigation__group {
+    display: block;
+  }
+  // Style subpages
+  .cmp-navigation__item--level-1 {
+    .cmp-navigation__item-link {
+      font-size: $font-size-small;
+      font-weight: 500;
+      margin-left: 1.5em;
+
+      &::before {
+        content: "";
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-small) {
+  #header--nav {
+    float: none;
+    padding-right: 0;
+
+    .cmp-navigation__item {
+      display: block;
+      float: none;
+
+      margin-bottom: 1.2em;
+      border-left: 2px solid $brand-primary;
+    }
+    .cmp-navigation__item-link {
+      padding: 20px 15px;
+    }
+  }
+
+  .cmp-navigation--wiki {
+    .cmp-navigation__item-link {
+      font-size: $font-size-paragraph;
+    }
   }
 }
